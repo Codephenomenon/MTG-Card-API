@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const dbConnect = require('./utility/database');
+const dbConnect = require('../utility/database');
 
 router.get('/', (req, res, next) => {
     dbConnect.query("SELECT * FROM mtg_set", function(error, rows, fields) {
